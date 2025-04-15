@@ -1,2 +1,2 @@
 # github_actions
-Das ist ein test für die merge-queue
+Das ist ein test für den PR
