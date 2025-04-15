@@ -5,14 +5,28 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  skip_job:
+  job1:
     if: contains(github.event.pull_request.labels.*.name, 'merge-queue-only') == false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run your checks
+      - name: Run a simple check for job1
         run: |
-          echo "Running checks..."
-          # Add your check commands here
+          echo "Job 1: Running a simple check..."
+          # Simulate a check
+          echo "Check passed for job1."
+
+  job2:
+    if: contains(github.event.pull_request.labels.*.name, 'merge-queue-only') == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run a simple check for job2
+        run: |
+          echo "Job 2: Running a simple check..."
+          # Simulate a check
+          echo "Check passed for job2."

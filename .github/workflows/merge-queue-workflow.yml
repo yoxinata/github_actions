@@ -15,4 +15,3 @@ jobs:
       - name: Run merge queue checks
         run: |
           echo "Running merge queue checks..."
-          # Add your merge queue check commands here
